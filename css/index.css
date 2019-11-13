@@ -14,6 +14,7 @@ body{
 	background: url(https://www.ocu.org/-/media/ocu/images/home/vivienda%20y%20energia/equipamiento%20hogar/herramientas%20cabecera.jpg?la=es-es&rev=9e765ac9-da97-4833-a910-e2168b4c0749&hash=4138B2A3F478CC996CF1384D157DCCFA56D61528);
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 	font-family: Lato;
 }
 
