@@ -3,7 +3,7 @@ window.onload = function(){
 	$("#electricas").fadeToggle();
 	$("#iluminacion_bombillas").fadeToggle();
 };
-s
+
 $("#electricas_icon").click(function(){
 	$("#electricas").fadeToggle();
 });
