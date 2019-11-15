@@ -3,13 +3,7 @@ window.onload = function(){
 	$("#electricas").fadeToggle();
 	$("#iluminacion_bombillas").fadeToggle();
 };
-
-/**$(document).ready(function(){
-	console.log("Desapareciendo");
-	
-	$("#manuales").fadeToggle();
-})**/
-
+s
 $("#electricas_icon").click(function(){
 	$("#electricas").fadeToggle();
 });
