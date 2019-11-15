@@ -3,6 +3,11 @@
 	float:left;
 	margin-right: 0.5em
 }
+.producto{
+	width: 100%;
+	height: 200px;
+	border: black 3px ridge;
+}
 
 #content{
 	
