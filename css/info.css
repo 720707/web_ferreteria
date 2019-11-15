@@ -1,6 +1,6 @@
 /**Estilo del icono de informacion**/
 .fa-info{
-	float:right;
+	float:left;
 }
 
 #content{
@@ -22,4 +22,8 @@ body{
 	/*Espacio superior en nuestra pagina entre la barra de navegacion y el primer elemento*/)
  	padding-top: 70px;
  	margin-bottom: 10%;
+}
+
+html{
+	height: 100%;
 }
