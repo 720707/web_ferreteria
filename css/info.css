@@ -9,6 +9,12 @@
 	border: black 3px ridge;
 }
 
+.empleado{
+	width: 100%;
+	height: 300px;
+	border: black 3px ridge;
+}
+
 #content{
 	
 	/*Separamos el contenido de la parte superior y lo centramos*/
