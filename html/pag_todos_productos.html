@@ -19,6 +19,22 @@
 <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
 
 <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBr3K0g46i_ZQVj_YsIisccyL2S_9TZc_0",
+    authDomain: "ferreteria-81897.firebaseapp.com",
+    databaseURL: "https://ferreteria-81897.firebaseio.com",
+    projectId: "ferreteria-81897",
+    storageBucket: "ferreteria-81897.appspot.com",
+    messagingSenderId: "1093455286088",
+    appId: "1:1093455286088:web:22df8c50daa880e45b6d7d",
+    measurementId: "G-3F79NE21KJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script>
 	$(function(){
       $("#includedBar").load("barra_navegacion.html"); 
       $("#includedFooter").load("footer.html");
