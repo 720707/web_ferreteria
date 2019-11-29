@@ -18,7 +18,15 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
 
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+
 <script>
+
   // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyBr3K0g46i_ZQVj_YsIisccyL2S_9TZc_0",
@@ -34,6 +42,7 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
+
 <script>
 	$(function(){
       $("#includedBar").load("barra_navegacion.html"); 
