@@ -27,6 +27,12 @@ db.collection("users").add({
     console.error("Error adding document: ", error);
 });
 
+db.collection("users").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+    });
+});
+
 window.onload = function(){
 	$("#manuales").fadeToggle();
 	$("#electricas").fadeToggle();
