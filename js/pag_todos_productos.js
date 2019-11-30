@@ -16,7 +16,7 @@ firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
 
-db.collection("prductos").get().then((querySnapshot) => {
+db.collection("productos").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
     });
