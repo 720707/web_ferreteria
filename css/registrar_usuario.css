@@ -16,7 +16,7 @@ body {
 }
 
 .form-signin{
-   padding-top: 15%;
+   padding-top: 9%;
 }
 .form-signin .checkbox {
   font-weight: 400;
@@ -42,6 +42,3 @@ body {
   border-top-right-radius: 0;
 }
 
-#container{
-  padding-top:15%;
-}
