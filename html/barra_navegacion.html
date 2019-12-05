@@ -15,16 +15,29 @@ con style podemos cambiar el color de la barra-->
 	        <a class="nav-link" href="index.html">Inicio</a>
 	      </li>
 
-	       <li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          		Productos
-        		</a>
-        			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				        <a class="dropdown-item" href="pag_todos_productos.html">Todos</a>
-				        <a class="dropdown-item" href="#">Ofertas</a>
-				        <a class="dropdown-item" href="#">Novedades</a>
-        			</div>
-      	   </li>
+	      <div class="dropdown">
+		    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+		    <span class="caret"></span></button>
+		    <ul class="dropdown-menu">
+		      <li><a tabindex="-1" href="#">HTML</a></li>
+		      <li><a tabindex="-1" href="#">CSS</a></li>
+		      <li class="dropdown-submenu">
+		        <a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+		          <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+		          <li class="dropdown-submenu">
+		            <a class="test" href="#">Another dropdown <span class="caret"></span></a>
+		            <ul class="dropdown-menu">
+		              <li><a href="#">3rd level dropdown</a></li>
+		              <li><a href="#">3rd level dropdown</a></li>
+		            </ul>
+		          </li>
+		        </ul>
+		      </li>
+		    </ul>
+		  </div>
+		</div>
 
 	      <li class="nav-item">
 	        <a class="nav-link" href="info.html">Sobre</a>
