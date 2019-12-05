@@ -3,7 +3,7 @@ html{
 	height: 100%;
 }
 
-.producto{
+.img_producto{
 	width: 100%;
 	height: 200px;
 	border: black 3px ridge;
@@ -39,21 +39,22 @@ text {
 	background-color: white;
 	width: 100%;
 	height: 10%;
-	border: grey 1px solid;
 }
 
-.categoria{
-	background: #2980b9;
-	color: white;
-	/**La primer es arriba y abajo y la segunda es izq y der**/
-	padding: 10px 20px;
-	text-transform: uppercase;
-	font-size: 24px;
-	font-weight: normal;
-}
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-/**Estilo del icono para añadir tareas**/
-.fa-plus{
-	float:right;
-}
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
 
