@@ -3,9 +3,7 @@ html{
 	height: 100%;
 }
 
-.info_producto{
-	color: white;
-}
+
 .img_producto{
 	width: 100%;
 	height: 200px;
@@ -25,7 +23,6 @@ html{
 
 body{
 	/*Ponemos una imagen como fondo, con size hacemos que ocupe todo el espacio y finalmente con position, centramos la imagen*/
-	background: url(https://sumex.com.es/wp-content/uploads/2017/04/sumex-igualada-ferreteria-03.jpg);
 	background-size: cover;
 	background-position: center;
 	font-family: Lato;
@@ -38,11 +35,6 @@ text {
 	color: blue;
 }
 
-.info_product{
-	background-color: white;
-	width: 100%;
-	height: 10%;
-}
 
 .bd-placeholder-img {
         font-size: 1.125rem;
