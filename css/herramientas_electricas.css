@@ -10,6 +10,10 @@ html{
 	border: black 3px ridge;
 }
 
+.info_producto{
+	text-align: center;
+}
+
 #content{
 	/*Separamos el contenido de la parte superior y lo centramos*/
 	padding-top:20%;
