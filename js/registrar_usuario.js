@@ -25,6 +25,7 @@ $("#registrar").click(function(){
 	  var errorCode = error.code;
 	  var errorMessage = error.message;
 	  // ...
+	});
 
 });
 
