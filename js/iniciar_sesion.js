@@ -12,6 +12,7 @@ var firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+var infoInicioSesion = document.querySelector("#infoInicioSesion");
 
 //Se captura el usuario y contraseña del formulario y se registra
 $("#iniciar_sesion").click(function(event){
@@ -24,9 +25,9 @@ $("#iniciar_sesion").click(function(event){
   		// Handle Errors here.
   		var errorCode = error.code;
   		var errorMessage = error.message;
-  		infoRegistro.textContent = error.message;
+  		infoInicioSesion.textContent = error.message;
 	});
-	infoRegistro.textContent = "Registro correcto";
+	infoInicioSesion.textContent = "Registro correcto";
 
 });
 
