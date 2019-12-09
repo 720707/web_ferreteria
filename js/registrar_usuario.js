@@ -15,8 +15,7 @@ firebase.initializeApp(firebaseConfig);
 var infoRegistro = document.querySelector("#infoRegistro");
 
 //Se captura el usuario y contraseña del formulario y se registra
-$("#registrar").click(function(event){
-	event.preventDefault();
+$("#registrar").click(function(){
 	console.log("Registrando usuario");
 	var email = $("#inputEmail").val();
 	var contrasena = $("#inputPassword").val();
