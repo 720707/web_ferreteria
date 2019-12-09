@@ -1,13 +1,13 @@
 // Firebase con Authentication para usuarios
 var firebaseConfig = {
-    apiKey: "AIzaSyDiRHZ3r8OjbLaXh0dUhGVn6StEXYwDf04",
-    authDomain: "usuarios-ee0e3.firebaseapp.com",
-    databaseURL: "https://usuarios-ee0e3.firebaseio.com",
-    projectId: "usuarios-ee0e3",
-    storageBucket: "usuarios-ee0e3.appspot.com",
-    messagingSenderId: "316506880280",
-    appId: "1:316506880280:web:08e782358f053bd092866d",
-    measurementId: "G-HE7HTK8RGY"
+    apiKey: "AIzaSyBr3K0g46i_ZQVj_YsIisccyL2S_9TZc_0",
+	authDomain: "ferreteria-81897.firebaseapp.com",
+	databaseURL: "https://ferreteria-81897.firebaseio.com",
+	projectId: "ferreteria-81897",
+	storageBucket: "ferreteria-81897.appspot.com",
+	messagingSenderId: "1093455286088",
+	appId: "1:1093455286088:web:22df8c50daa880e45b6d7d",
+	measurementId: "G-3F79NE21KJ"
   };
 
 // Initialize Firebase
