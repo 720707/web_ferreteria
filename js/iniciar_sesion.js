@@ -14,22 +14,19 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 //Se captura el usuario y contraseña del formulario y se registra
-$("#registrar").click(function(event){
+$("#iniciar_sesion").click(function(event){
 	event.preventDefault();
 
 	var email = $("#inputEmail").val();
 	var contrasena = $("#inputPassword").val();
 
-	firebase.auth().createUserWithEmailAndPassword(email, contrasena).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  infoRegistro.textContent = error.message;
-	  console.log(errorCode + " " + errorMessage);
-	  // ...
+	firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  		// Handle Errors here.
+  		var errorCode = error.code;
+  		var errorMessage = error.message;
+  		infoRegistro.textContent = error.message;
 	});
 	infoRegistro.textContent = "Registro correcto";
-	console.log("Registro correcto");
 
 });
 
