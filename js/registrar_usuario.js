@@ -13,7 +13,6 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-var db = firebase.firestore();
 
 //Se captura el usuario y contraseña del formulario y se registra
 $("#registrar").click(function(){
