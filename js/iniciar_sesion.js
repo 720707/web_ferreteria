@@ -27,7 +27,7 @@ $("#iniciar_sesion").click(function(event){
   		var errorMessage = error.message;
   		infoInicioSesion.textContent = error.message;
 	});
-	infoInicioSesion.textContent = "Registro correcto";
+	infoInicioSesion.textContent = "Inicio de sesión correcto";
 
 });
 
