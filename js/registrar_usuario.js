@@ -17,9 +17,10 @@ var db = firebase.firestore();
 
 //Se captura el usuario y contraseña del formulario y se registra
 $("#registrar").click(function(){
+	console.log("Registrando usuario");
 	var email = $("#inputEmail").val();
 	var contrasena = $("#inputPassword").val();
-
+     console.log("Registrando usuario 2" + email + contrasena);
 	firebase.auth().createUserWithEmailAndPassword(email, contrasena).catch(function(error) {
 	  // Handle Errors here.
 	  var errorCode = error.code;
