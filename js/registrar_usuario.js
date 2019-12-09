@@ -26,11 +26,9 @@ $("#registrar").click(function(event){
 	  var errorCode = error.code;
 	  var errorMessage = error.message;
 	  infoRegistro.textContent = error.message;
-	  console.log(errorCode + " " + errorMessage);
 	  // ...
 	});
 	infoRegistro.textContent = "Registro correcto";
-	console.log("Registro correcto");
 
 });
 
