@@ -12,9 +12,11 @@ var firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+var infoRegistro = document.querySelector("#infoRegistro");
 
 //Se captura el usuario y contraseña del formulario y se registra
-$("#registrar").click(function(){
+$("#registrar").click(function(e){
+	e.preventDefault();
 	console.log("Registrando usuario");
 	var email = $("#inputEmail").val();
 	var contrasena = $("#inputPassword").val();
@@ -23,9 +25,11 @@ $("#registrar").click(function(){
 	  // Handle Errors here.
 	  var errorCode = error.code;
 	  var errorMessage = error.message;
+	  infoRegistro.textContent = error.message;
 	  console.log(errorCode + " " + errorMessage);
 	  // ...
 	});
+	infoRegistro.textContent = "Registro correcto";
 	console.log("Registro correcto");
 
 });
