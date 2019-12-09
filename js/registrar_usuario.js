@@ -9,22 +9,22 @@ var firebaseConfig = {
     appId: "1:316506880280:web:08e782358f053bd092866d",
     measurementId: "G-HE7HTK8RGY"
   };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 var db = firebase.firestore();
 
-
+//Se captura el usuario y contraseña del formulario y se registra
 $("#registrar").click(function(){
 	var email = $("#inputEmail").val();
-	var contraseña = $("#inputPassword").val();
-	console.log("Registrando "+contraseña+email)
+	var contrasena = $("#inputPassword").val();
+
+	firebase.auth().createUserWithEmailAndPassword(email, contrasena).catch(function(error) {
+	  // Handle Errors here.
+	  var errorCode = error.code;
+	  var errorMessage = error.message;
+	  // ...
 
 });
 
-firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // ...
-});
