@@ -26,6 +26,7 @@ $("#registrar").click(function(){
 	  console.log(errorCode + " " + errorMessage);
 	  // ...
 	});
+	console.log("Registro correcto");
 
 });
 
