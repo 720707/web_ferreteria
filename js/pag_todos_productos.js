@@ -1,5 +1,6 @@
 
 // Your web app's Firebase configuration
+/**
 var firebaseConfig = {
 	apiKey: "AIzaSyBr3K0g46i_ZQVj_YsIisccyL2S_9TZc_0",
 	authDomain: "ferreteria-81897.firebaseapp.com",
@@ -21,7 +22,7 @@ db.collection("productos").get().then((querySnapshot) => {
         console.log(`${doc.id} => ${doc.data()}`);
     });
 });
-
+**/
 window.onload = function(){
 	$("#manuales").fadeToggle();
 	$("#electricas").fadeToggle();
