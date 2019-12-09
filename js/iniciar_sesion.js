@@ -34,6 +34,7 @@ $("#iniciar_sesion").click(function(event){
 function observador(){
 	firebase.auth().onAuthStateChanged(function(user) {
 	  if (user) {
+	  	$("#iniciarSesionBarNav").textContent = user.displayName;
 	    // User is signed in.
 	    var displayName = user.displayName;
 	    var email = user.email;
