@@ -31,25 +31,6 @@ $("#iniciar_sesion").click(function(event){
 
 });
 
-$("span").on("click","button", function(event){
-	console.log("Click salir");
-	firebase.auth().singOut().then(function(){
-		console.log("Saliendo...");
-	}).catch(function(error){
-		console.log(error);
-	})
-});
-
-
-
-$("span").click(function(event){
-	console.log("Click salir");
-	firebase.auth().singOut().then(function(){
-		console.log("Saliendo...");
-	}).catch(function(error){
-		console.log(error);
-	})
-})
 
 function observador(){
 	firebase.auth().onAuthStateChanged(function(user) {
@@ -77,6 +58,15 @@ observador();
 function usuarioRegistrado(email){
 	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");
 	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
-	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
+	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' onclick='cerrar()' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
+}
+
+function cerrar(){
+	console.log("Click salir");
+	firebase.auth().singOut().then(function(){
+		console.log("Saliendo...");
+	}).catch(function(error){
+		console.log(error);
+	})
 }
 
