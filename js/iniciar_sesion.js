@@ -63,7 +63,7 @@ function usuarioRegistrado(email){
 
 function cerrar(){
 	console.log("Click salir");
-	firebase.auth().singOut().then(function(){
+	firebase.auth().signOut().then(function(){
 		console.log("Saliendo...");
 	}).catch(function(error){
 		console.log(error);
