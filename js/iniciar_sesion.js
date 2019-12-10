@@ -56,7 +56,7 @@ function observador(){
 observador();
 
 function usuarioRegistrado(){
-	 $("#RegistrarBarNav").html(email);
+	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link' href='#'><i class='fas fa-user-plus'></i>" + email + "</a></li>");
 	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
 	 //$("#IniciarSesionBarNav").html()
 }
