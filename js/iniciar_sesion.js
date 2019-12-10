@@ -34,7 +34,7 @@ $("#iniciar_sesion").click(function(event){
 function observador(){
 	firebase.auth().onAuthStateChanged(function(user) {
 	  if (user) {
-	  	$("#iniciarSesionBarNav").html("user.displayName");
+	  	//$("#iniciarSesionBarNav").html("<li class='nav-item'><a class='nav-link'><i class='fas fa-user-plus'></i>" +</a></li></span>);
 	    // User is signed in.
 	    var displayName = user.displayName;
 	    var email = user.email;
@@ -43,6 +43,7 @@ function observador(){
 	    var isAnonymous = user.isAnonymous;
 	    var uid = user.uid;
 	    var providerData = user.providerData;
+	    $("#iniciarSesionBarNav").html(displayName);
 	    // ...
 	  } else {
 	    // User is signed out.
