@@ -60,7 +60,7 @@ function usuarioRegistrado(email){
 	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
 }
 
-$("#IniciarSesionBarNav").on("click","button", function(event){
+$("span").on("click","button", function(event){
 	console.log("Click salir");
 	firebase.auth().singOut().then(function(){
 		console.log("Saliendo...");
