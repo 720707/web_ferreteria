@@ -64,7 +64,9 @@ function usuarioRegistrado(email){
 function cerrar(){
 	console.log("Click salir");
 	firebase.auth().signOut().then(function(){
-		console.log("Saliendo...");
+		$("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link' href='registrar_usuario.html'><i class='fas fa-user-plus'></i> Registrarse</a></li>");
+	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
+	 $("#IniciarSesionBarNav").html("<li class='nav-item'><a class='nav-link' href='iniciar_sesion.html'><i class='fas fa-user'></i> Iniciar Sesion</a></li>");
 	}).catch(function(error){
 		console.log(error);
 	})
