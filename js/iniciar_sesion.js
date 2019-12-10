@@ -44,7 +44,7 @@ function observador(){
 	    var isAnonymous = user.isAnonymous;
 	    var uid = user.uid;
 	    var providerData = user.providerData;
-	    usuarioRegistrado();
+	    usuarioRegistrado(email);
 	    // ...
 	  } else {
 	    // User is signed out.
@@ -55,8 +55,8 @@ function observador(){
 
 observador();
 
-function usuarioRegistrado(){
-	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link' href='#'><i class='fas fa-user-plus'></i>" + email + "</a></li>");
+function usuarioRegistrado(email){
+	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link' href='#'>" + email + "</a></li>");
 	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
 	 //$("#IniciarSesionBarNav").html()
 }
