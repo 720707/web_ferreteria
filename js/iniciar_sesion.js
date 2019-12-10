@@ -31,6 +31,26 @@ $("#iniciar_sesion").click(function(event){
 
 });
 
+$("span").on("click","button", function(event){
+	console.log("Click salir");
+	firebase.auth().singOut().then(function(){
+		console.log("Saliendo...");
+	}).catch(function(error){
+		console.log(error);
+	})
+});
+
+
+
+$("span").click(function(event){
+	console.log("Click salir");
+	firebase.auth().singOut().then(function(){
+		console.log("Saliendo...");
+	}).catch(function(error){
+		console.log(error);
+	})
+})
+
 function observador(){
 	firebase.auth().onAuthStateChanged(function(user) {
 	  if (user) {
@@ -60,20 +80,3 @@ function usuarioRegistrado(email){
 	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
 }
 
-$("span").on("click","button", function(event){
-	console.log("Click salir");
-	firebase.auth().singOut().then(function(){
-		console.log("Saliendo...");
-	}).catch(function(error){
-		console.log(error);
-	})
-});
-
-$("#cerrarSesionBoton").click(function(event){
-	console.log("Click salir");
-	firebase.auth().singOut().then(function(){
-		console.log("Saliendo...");
-	}).catch(function(error){
-		console.log(error);
-	})
-})
