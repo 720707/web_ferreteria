@@ -68,3 +68,12 @@ $("#IniciarSesionBarNav").on("click","button", function(event){
 		console.log(error);
 	})
 });
+
+$("#cerrarSesionBoton").click(function(event){
+	console.log("Click salir");
+	firebase.auth().singOut().then(function(){
+		console.log("Saliendo...");
+	}).catch(function(error){
+		console.log(error);
+	})
+})
