@@ -37,7 +37,6 @@ function observador(){
 	  	//$("#iniciarSesionBarNav").html("<li class='nav-item'><a class='nav-link'><i class='fas fa-user-plus'></i>" +</a></li></span>);
 	    // User is signed in.
 	    var displayName = user.displayName;
-	    console.log(displayName);
 	    var email = user.email;
 	    var emailVerified = user.emailVerified;
 	    var photoURL = user.photoURL;
@@ -62,6 +61,7 @@ function usuarioRegistrado(email){
 }
 
 $("#IniciarSesionBarNav").on("click","button", function(event){
+	console.log("Click salir");
 	firebase.auth().singOut().then(function(){
 		console.log("Saliendo...");
 	}).catch(function(error){
