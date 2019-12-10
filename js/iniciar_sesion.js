@@ -37,13 +37,14 @@ function observador(){
 	  	//$("#iniciarSesionBarNav").html("<li class='nav-item'><a class='nav-link'><i class='fas fa-user-plus'></i>" +</a></li></span>);
 	    // User is signed in.
 	    var displayName = user.displayName;
+	    console.log(displayName);
 	    var email = user.email;
 	    var emailVerified = user.emailVerified;
 	    var photoURL = user.photoURL;
 	    var isAnonymous = user.isAnonymous;
 	    var uid = user.uid;
 	    var providerData = user.providerData;
-	    $("#iniciarSesionBarNav").html(displayName);
+	    usuarioRegistrado();
 	    // ...
 	  } else {
 	    // User is signed out.
@@ -53,3 +54,9 @@ function observador(){
 }
 
 observador();
+
+function usuarioRegistrado(){
+	 $("#RegistrarBarNav").html(displayName);
+	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
+	 //$("#IniciarSesionBarNav").html()
+}
