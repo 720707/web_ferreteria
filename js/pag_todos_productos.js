@@ -16,7 +16,45 @@ firebase.initializeApp(firebaseConfig);
 
 var db = firebase.firestore();
 
+function observador(){
+	firebase.auth().onAuthStateChanged(function(user) {
+	  if (user) {
+	  	//$("#iniciarSesionBarNav").html("<li class='nav-item'><a class='nav-link'><i class='fas fa-user-plus'></i>" +</a></li></span>);
+	    // User is signed in.
+	    var displayName = user.displayName;
+	    var email = user.email;
+	    var emailVerified = user.emailVerified;
+	    var photoURL = user.photoURL;
+	    var isAnonymous = user.isAnonymous;
+	    var uid = user.uid;
+	    var providerData = user.providerData;
+	    usuarioRegistrado(email);
+	    // ...
+	  } else {
+	    // User is signed out.
+	    // ...
+	  }
+	});
+}
 
+observador();
+
+function usuarioRegistrado(email){
+	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");
+	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
+	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' onclick='cerrar()' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
+}
+
+function cerrar(){
+	console.log("Click salir");
+	firebase.auth().signOut().then(function(){
+		$("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link' href='registrar_usuario.html'><i class='fas fa-user-plus'></i> Registrarse</a></li>");
+	 	//Cambiar icono de iniciar sesion por uno de cerrar sesion
+	 	$("#IniciarSesionBarNav").html("<li class='nav-item'><a class='nav-link' href='iniciar_sesion.html'><i class='fas fa-user'></i> Iniciar Sesion</a></li>");
+	}).catch(function(error){
+		console.log(error);
+	})
+}
 db.collection("productos").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
@@ -40,3 +78,4 @@ $("#manuales_icon").click(function(){
 $("#iluminacion_icon").click(function(){
 	$("#iluminacion_bombillas").fadeToggle();
 });
+
