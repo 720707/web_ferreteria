@@ -58,5 +58,5 @@ observador();
 function usuarioRegistrado(email){
 	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");
 	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
-	 $("#IniciarSesionBarNav").html("<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
+	 $("#IniciarSesionBarNav").html("<button class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
 }
