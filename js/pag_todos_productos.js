@@ -59,35 +59,21 @@ function cerrar(){
 	})
 }
 
-//Obtener las herramientas de la DB ghg
+//Obtener las herramientas de la DB y crear un featurette para cada herramienta
 db.collection("herramientas_electricas").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-    	console.log(doc.data().Nombre);
-    	console.log(doc.data().Marca);
-    	console.log(doc.data().Precio);
-    	console.log(doc.data().Imagen);
-    	console.log(doc.data().Medidas);
-    	console.log(doc.data().Unidades);
-    	console.log(doc.data().Peso);
-        $(".herramientas_electricas").append("<hr class='featurette-divider'> <div class='row featurette'> <div class='col-md-7 order-md-2 info_producto'> <p><font size='3'>Nombre del producto: &nbsp <span> " + doc.data().Nombre + "</span><font></p> <p>Precio: &nbsp <span> " + doc.data().Precio + "</span></p> <p>Unidades Disponibles: &nbsp <span> " + doc.data().Unidades +"</span></p> <p>Marca: &nbsp <span> " +doc.data().Marca + "</span></p> <p>Otras características: &nbsp <span>Medidas : " + doc.data().Medidas + "</span></p> <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: " + doc.data().Peso +"</p> </div> <div class='col-lg-4 col-md-6 col-sm-6 order-md-1'> <img src=" + doc.data().Imagen + " width='400' height='275'> </div> </div>");
+        $(".herramientas_electricas").append("<hr class='featurette-divider'> " + 
+        	"<div class='row featurette'>" 
+        	+ "<div class='col-md-7 order-md-2 info_producto'>" +
+        	"<p><font size='3'>Nombre del producto: &nbsp <span> " 
+        	+ doc.data().Nombre + "</span><font></p> <p>Precio: &nbsp <span> " 
+        	+ doc.data().Precio + "</span></p> <p>Unidades Disponibles: &nbsp <span> " 
+        	+ doc.data().Unidades +"</span></p> <p>Marca: &nbsp <span> " 
+        	+ doc.data().Marca + "</span></p> <p>Otras características: &nbsp <span>Medidas : " 
+        	+ doc.data().Medidas + "</span></p> <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: " 
+        	+ doc.data().Peso +"</p> </div> <div class='col-lg-4 col-md-6 col-sm-6 order-md-1'> <img src=" 
+        	+ doc.data().Imagen + " width='400' height='275'> </div> </div>");
     });
 });
 
-window.onload = function(){
-	$("#manuales").fadeToggle();
-	$("#electricas").fadeToggle();
-	$("#iluminacion_bombillas").fadeToggle();
-};
-
-$("#electricas_icon").click(function(){
-	$("#electricas").fadeToggle();
-});
-
-$("#manuales_icon").click(function(){
-	$("#manuales").fadeToggle();
-});
-
-$("#iluminacion_icon").click(function(){
-	$("#iluminacion_bombillas").fadeToggle();
-});
 
