@@ -59,7 +59,7 @@ function cerrar(){
 	})
 }
 
-//Obtener las herramientas de la DB y crear un featurette para cada herramienta
+//Obtener los empleados de la DB y crear un dropdown para cada uno
 db.collection("empleados").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         $(".row").append("<div class='col-lg-4 dropdown'>"+
