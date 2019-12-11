@@ -59,7 +59,7 @@ function cerrar(){
 	})
 }
 
-//Obtener las herramientas de la DB
+//Obtener las herramientas de la DB ghg
 db.collection("herramientas_electricas").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
     	console.log(doc.data().Nombre);
