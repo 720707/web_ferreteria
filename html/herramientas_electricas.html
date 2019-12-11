@@ -44,6 +44,10 @@ con style podemos cambiar el color de la barra-->
 		<p>Todas las herramientas eléctricas de las que disponemos</p>
 	</div>
 
+<!--hay que recorrer todos los productos para que al cargar los datos de la base de datos, se cambie la info
+de los span por la que esta en la DB, esto se puede hacer dandole a cada span el mimso nombre pero con un numero delante y que al recorrer los elementos de la DB, se le sumo uno a una variable de manera que escribamose en el $("#nombre"+i).html("< , asi se tendira $("#nombre1").html("<  , esto para cada elemento.
+
+Otra manera que se me ha ocurrido, es obtener todos los elementos cuyo id sea info_producto y encontrar una forma de interar dentro de ellos-->
 
 	<!-- START THE FEATURETTES -->
 
@@ -51,11 +55,11 @@ con style podemos cambiar el color de la barra-->
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2 info_producto">
-        <p><font size="3">Nombre del producto: &nbsp <span>Taladro atornillador Stanley FatMax 10.8V 1.5Ah</span><font></p>
-        <p>Precio: &nbsp <span>102,17€</span></p>
-        <p>Unidades Disponibles: &nbsp <span>20</span></p>
-        <p>Marca: &nbsp <span>Stanley</span></p>
-        <p>Otras características: &nbsp <span>Medidas : 180 x 200 x 65 mm</span></p>
+        <p><font size="3">Nombre del producto: &nbsp <span id="nombre1">Taladro atornillador Stanley FatMax 10.8V 1.5Ah</span><font></p>
+        <p>Precio: &nbsp <span id="precio1">102,17€</span></p>
+        <p>Unidades Disponibles: &nbsp <span id=unidades1>20</span></p>
+        <p>Marca: &nbsp <span id="marca1">Stanley</span></p>
+        <p>Otras características: &nbsp <span id="medidas1">Medidas : 180 x 200 x 65 mm</span></p>
         <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: 1.0 kg</p>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6 order-md-1">
@@ -68,12 +72,12 @@ con style podemos cambiar el color de la barra-->
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2 info_producto">
-        <p><font size="3">Nombre del producto: &nbsp <span></span><font>Lijadora orbital Bosch PEX 300 AE</p>
-        <p>Precio: &nbsp <span>116,55€</span></p>
-        <p>Unidades Disponibles: &nbsp <span>15</span></p>
-        <p>Marca: &nbsp <span>Bosch</span></p>
-        <p>Otras características: &nbsp <span>Potencia absorbida: 270 W</span></p>
-        <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: 1.5 kg</p>
+        <p><font size="3">Nombre del producto: &nbsp<font><span id="nombre1">Lijadora orbital Bosch PEX 300 AE</p><span>
+        <p>Precio: &nbsp <span id="precio1">116,55€</span></p>
+        <p>Unidades Disponibles: &nbsp <span id="unidades1">15</span></p>
+        <p>Marca: &nbsp <span id="marca1">Bosch</span></p>
+        <p>Otras características: &nbsp <span id="">Potencia absorbida: 270 W</span></p>
+        <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: <span>1.5 kg</span></p>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6 order-md-1">
           <img src="https://ferreteria.es/media/catalog/product/cache/5/image/700x700/9df78eab33525d08d6e5fb8d27136e95/9/6/9646948.jpg" width="400" height="275">

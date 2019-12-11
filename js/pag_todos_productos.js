@@ -55,9 +55,16 @@ function cerrar(){
 		console.log(error);
 	})
 }
-db.collection("productos").get().then((querySnapshot) => {
+
+db.collection("herramientas_electricas").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         console.log(`${doc.id} => ${doc.data()}`);
+        doc.data().Nombre;
+        doc.data().Precio;
+        doc.data().Unidades;
+        doc.data().Marca;
+        doc.data().Medidas;
+        doc.data().Peso;
     });
 });
 
