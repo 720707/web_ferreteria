@@ -102,3 +102,80 @@
 		</div>
 
 	</div>
+
+
+
+
+
+
+
+
+	
+	<!-- START THE FEATURETTES -->
+
+	<hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2 info_producto">
+        <p><font size="3">Nombre del producto: &nbsp <span id="nombre1">Taladro atornillador Stanley FatMax 10.8V 1.5Ah</span><font></p>
+        <p>Precio: &nbsp <span id="precio1">102,17€</span></p>
+        <p>Unidades Disponibles: &nbsp <span id=unidades1>20</span></p>
+        <p>Marca: &nbsp <span id="marca1">Stanley</span></p>
+        <p>Otras características: &nbsp <span id="medidas1">Medidas : 180 x 200 x 65 mm</span></p>
+        <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: 1.0 kg</p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 order-md-1">
+          <img src="https://ferreteria.es/media/catalog/product/cache/5/image/700x700/9df78eab33525d08d6e5fb8d27136e95/f/m/fmc011s2_1.jpg" width="400" height="275">
+     </div>
+    </div>
+
+
+  <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2 info_producto">
+        <p><font size="3">Nombre del producto: &nbsp<font><span id="nombre1">Lijadora orbital Bosch PEX 300 AE</p><span>
+        <p>Precio: &nbsp <span id="precio1">116,55€</span></p>
+        <p>Unidades Disponibles: &nbsp <span id="unidades1">15</span></p>
+        <p>Marca: &nbsp <span id="marca1">Bosch</span></p>
+        <p>Otras características: &nbsp <span id="">Potencia absorbida: 270 W</span></p>
+        <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: <span>1.5 kg</span></p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 order-md-1">
+          <img src="https://ferreteria.es/media/catalog/product/cache/5/image/700x700/9df78eab33525d08d6e5fb8d27136e95/9/6/9646948.jpg" width="400" height="275">
+     </div>
+    </div>
+
+   <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2 info_producto">
+        <p><font size="3">Nombre del producto: &nbsp <span></span><font>Sierra de sable Stanley FatMax 900W</p>
+        <p>Precio: &nbsp <span>83,28€</span></p>
+        <p>Unidades Disponibles: &nbsp <span>10</span></p>
+        <p>Marca: &nbsp <span>Stanley</span></p>
+        <p>Otras características: &nbsp <span>Medidas: 520 x 155 x 80 mm</span></p>
+        <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: 3.1 kg</p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 order-md-1">
+          <img src="https://ferreteria.es/media/catalog/product/cache/5/image/700x700/9df78eab33525d08d6e5fb8d27136e95/f/m/fme360_1.jpg" width="400" height="275">
+     </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2 info_producto">
+          <p><font size="3">Nombre del producto: &nbsp <span></span><font>Sierra circular bricolaje 1200W Disco 185Mm Corte 65Mm Ch 185 C Stayer</p>
+          <p>Precio: &nbsp <span>92,85€</span></p>
+          <p>Unidades Disponibles: &nbsp <span>12</span></p>
+          <p>Marca: &nbsp <span>Stayer</span></p>
+          <p>Otras características: &nbsp <span>Dimensiones del disco: 185x16</span></p>
+          <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: 4.8 kg</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 order-md-1">
+            <img src="https://ferreteria.es/media/catalog/product/cache/5/image/700x700/9df78eab33525d08d6e5fb8d27136e95/5/4/54440.jpg" width="400" height="275">
+       </div>
+      </div>
+
+	
