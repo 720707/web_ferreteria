@@ -32,6 +32,7 @@ $("#registrar").click(function(event){
 
 });
 
+//Función que comprueba si hay una sesion actiba
 function observador(){
 	firebase.auth().onAuthStateChanged(function(user) {
 	  if (user) {
@@ -55,12 +56,14 @@ function observador(){
 
 observador();
 
+//Función para modificar los iconos cuando la sesion esta activa
 function usuarioRegistrado(email){
 	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");
 	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
 	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' onclick='cerrar()' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
 }
 
+//Función para cambiar los iconos cuando se cierra la sesion
 function cerrar(){
 	console.log("Click salir");
 	firebase.auth().signOut().then(function(){
@@ -70,4 +73,15 @@ function cerrar(){
 	}).catch(function(error){
 		console.log(error);
 	})
+}
+
+//Función que envia un correo electronico al usuario para verificar su cuenta
+function verificar(){
+	var user = firebase.auth().currentUser;
+
+	user.sendEmailVerification().then(function() {
+     // Email sent.
+	}).catch(function(error) {
+    // An error happened.
+	});
 }
