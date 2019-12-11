@@ -62,7 +62,7 @@ function cerrar(){
 //Obtener las herramientas de la DB y crear un featurette para cada herramienta
 db.collection("empleados").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-        $(".row").append("<div class='col-lg-4 dropdown'"+
+        $(".row").append("<div class='col-lg-4 dropdown'>"+
         "<img class ='empleado rounded-circle' src=" + doc.data().imagen +" width='200' height='140'>" +
         "<div class='dropdown-content'>" + 
         "<img src=" + doc.data().imagen + " width='300' height='200'> " +
