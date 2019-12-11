@@ -21,13 +21,15 @@ $("#iniciar_sesion").click(function(event){
 	var email = $("#inputEmail").val();
 	var contrasena = $("#inputPassword").val();
 
-	firebase.auth().signInWithEmailAndPassword(email, contrasena).catch(function(error) {
+	firebase.auth().signInWithEmailAndPassword(email, contrasena).then(function(){
+		infoInicioSesion.textContent = "Inicio de sesión correcto";
+	}).catch(function(error) {
   		// Handle Errors here.
   		var errorCode = error.code;
   		var errorMessage = error.message;
   		infoInicioSesion.textContent = error.message;
 	});
-	infoInicioSesion.textContent = "Inicio de sesión correcto";
+	
 
 });
 

@@ -21,14 +21,17 @@ $("#registrar").click(function(event){
 	var email = $("#inputEmail").val();
 	var contrasena = $("#inputPassword").val();
 
-	firebase.auth().createUserWithEmailAndPassword(email, contrasena).catch(function(error) {
+	firebase.auth().createUserWithEmailAndPassword(email, contrasena).then(function(){
+		infoRegistro.textContent = "Registro correcto";
+		verificar();
+	}).catch(function(error) {
 	  // Handle Errors here.
 	  var errorCode = error.code;
 	  var errorMessage = error.message;
 	  infoRegistro.textContent = error.message;
 	  // ...
 	});
-	infoRegistro.textContent = "Registro correcto";
+	
 
 });
 
