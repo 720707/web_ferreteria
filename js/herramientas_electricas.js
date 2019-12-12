@@ -1,6 +1,6 @@
 // Your web app's Firebase configuration
 
-var firebaseConfig = {
+/**var firebaseConfig = {
 	apiKey: "AIzaSyBr3K0g46i_ZQVj_YsIisccyL2S_9TZc_0",
 	authDomain: "ferreteria-81897.firebaseapp.com",
 	databaseURL: "https://ferreteria-81897.firebaseio.com",
@@ -17,7 +17,7 @@ if (!firebase.apps.length) {
 
 
 var db = firebase.firestore();
-
+**/
 function observador(){
 	firebase.auth().onAuthStateChanged(function(user) {
 	  if (user) {
