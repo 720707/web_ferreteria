@@ -1,10 +1,6 @@
+import {getObservador} from '../herramientas_electricas.js';
 
-const dbFire = require('./conectar_firebase.js');
-const db = require('./conectar_firebase.js');
-const observador = require('./conectar_firebase.js');
-
-
-observador();
+getObservador();
 
 function usuarioRegistrado(email){
 	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");

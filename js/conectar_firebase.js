@@ -10,13 +10,14 @@ var firebaseConfig = {
 };
 
 if (!firebase.apps.length) {
-    const dbFire = firebase.initializeApp(firebaseConfig);
+    var dbFire = firebase.initializeApp(firebaseConfig);
 }
 
 
-const db = firebase.firestore();
+var db = firebase.firestore();
 
-const observador = function observador(){
+
+function observador(){
 	firebase.auth().onAuthStateChanged(function(user) {
 	  if (user) {
 	  	//$("#iniciarSesionBarNav").html("<li class='nav-item'><a class='nav-link'><i class='fas fa-user-plus'></i>" +</a></li></span>);
@@ -37,4 +38,12 @@ const observador = function observador(){
 	});
 }
 
-module.export = {dbFire, db, observador};
+function usuarioRegistrado(email){
+	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");
+	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
+	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' onclick='cerrar()' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
+}
+
+export function getObservador(){
+	observador();
+}
