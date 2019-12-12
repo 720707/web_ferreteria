@@ -7,8 +7,8 @@ html{
 img{
 	
 	border: black 3px ridge;
-	margin-left: auto;
-	margin-right: auto;
+	display: block;
+	margin:auto;
 }
 
 .info_producto{
