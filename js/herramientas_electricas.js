@@ -1,3 +1,5 @@
+// Your web app's Firebase configuration
+
 var firebaseConfig = {
 	apiKey: "AIzaSyBr3K0g46i_ZQVj_YsIisccyL2S_9TZc_0",
 	authDomain: "ferreteria-81897.firebaseapp.com",
@@ -15,7 +17,6 @@ if (!firebase.apps.length) {
 
 
 var db = firebase.firestore();
-
 
 function observador(){
 	firebase.auth().onAuthStateChanged(function(user) {
@@ -38,11 +39,7 @@ function observador(){
 	});
 }
 
-function usuarioRegistrado(email){
-	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");
-	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
-	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' onclick='cerrar()' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
-}
+observador();
 
 function usuarioRegistrado(email){
 	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");
@@ -79,5 +76,6 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         	+ "</div> </div>");
     });
 });
+
 
 
