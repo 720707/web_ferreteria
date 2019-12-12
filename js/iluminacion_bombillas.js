@@ -60,7 +60,7 @@ function cerrar(){
 }
 
 //Obtener las herramientas de la DB y crear un featurette para cada herramienta
-db.collection("iluminacion_bombillas").get().then((querySnapshot) => {
+db.collection("Iluminacion_bombillas").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         $(".iluminacion_bombillas").append("<hr class='featurette-divider'> " + 
         	"<div class='row featurette'>" 
