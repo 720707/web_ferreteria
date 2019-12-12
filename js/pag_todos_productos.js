@@ -65,7 +65,7 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         $(".herramientas_electricas").append("<hr class='featurette-divider'> " + 
         	"<div class='row featurette'>" 
         	+ "<div class='col-md-7 order-md-2 info_producto'>" +
-        	"<p><font size='3'>Nombre del producto: &nbsp" + doc.data().Nombre + "<font> </p>"+
+        	"<p><font size='3'>Nombre del producto: &nbsp" + doc.data().Nombre + "</p>"+
         	"<p>Precio: &nbsp" + doc.data().Precio + "</p>"+ 
         	"<p>Unidades Disponibles: &nbsp " + doc.data().Unidades +" </p>" + 
         	"<p>Marca: &nbsp " + doc.data().Marca + "</p>" +
