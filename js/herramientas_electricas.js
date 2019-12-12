@@ -16,7 +16,7 @@ if (!firebase.apps.length) {
 }
 
 
-var db = firebase.firestore();ç
+var db = firebase.firestore();
 
 function observador(){
 	firebase.auth().onAuthStateChanged(function(user) {
