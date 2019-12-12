@@ -65,7 +65,7 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         $(".herramientas_electricas").append("<hr class='featurette-divider'> " + 
         	"<div class='row featurette'>" 
         	+ "<div class='col-md-7 order-md-2 info_producto'>" +
-        	"<p><font size='3'>Nombre del producto: &nbsp" + doc.data().Nombre + "</p>"+
+        	"<p><font size='3'>&nbsp" + doc.data().Nombre + "</p>"+
         	"<p>Precio: &nbsp" + doc.data().Precio + "</p>"+ 
         	"<p>Unidades Disponibles: &nbsp " + doc.data().Unidades +" </p>" + 
         	"<p>Marca: &nbsp " + doc.data().Marca + "</p>" +
@@ -73,7 +73,7 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         	"<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: " + doc.data().Peso + "</p>" +
         	"</div>" +
         	"<div class='col-lg-4 col-md-6 col-sm-6 order-md-1'>" +
-        	"<img src=" + doc.data().Imagen + " width='400' height='275'>"
+        	"<img src=" + doc.data().Imagen + " width='350' height='275'>"
         	+ "</div> </div>");
     });
 });
