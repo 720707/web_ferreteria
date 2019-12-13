@@ -5,8 +5,11 @@ html{
 
 img{
 	border: black 3px ridge;
+	display: block;
+  	margin: auto;
 }
 
+/*Alinear descripcion del producto al centro*/
 .info_producto{
 	text-align: center;
 }

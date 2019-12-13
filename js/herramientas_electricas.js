@@ -71,7 +71,7 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         	"<p>Otras características: &nbsp Medidas : " + doc.data().Medidas + "</p>" +
         	"<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: " + doc.data().Peso + "</p>" +
         	"</div>" +
-        	"<div class='col-lg-4 col-md-6 col-sm-6 order-md-1 img-fluid'>" +
+        	"<div class='col-lg-4 col-md-6 col-sm-6 order-md-1'>" +
         	"<img src=" + doc.data().Imagen + " width='300' height='275'>"
         	+ "</div> </div>");
     });
