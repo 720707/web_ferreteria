@@ -96,8 +96,12 @@ function crearDocumento(nombre){
         "$('#includedFooter').load('footer.html');"+
        "});"+
     "</script></head> <body> "+
-    "<div id='includedBar'></div></body></html>";
+    "<div id='includedBar'></div>";
+
+    var contenido = "<div class ='container'> <p id='id_herr'>"+nombre+"</p> <div id='includedFooter'></div>"+
+     "<script type='text/javascript' src='../js/obtener_herramienta.js'></script></body></html>";
 
 	doc.write(cabecera);
+	doc.write(contenido);
 }
 
