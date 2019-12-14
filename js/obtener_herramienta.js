@@ -1,5 +1,5 @@
 // Your web app's Firebase configuration
-
+console.log("Script para herramienta individual");
 var firebaseConfig = {
 	apiKey: "AIzaSyBr3K0g46i_ZQVj_YsIisccyL2S_9TZc_0",
 	authDomain: "ferreteria-81897.firebaseapp.com",
