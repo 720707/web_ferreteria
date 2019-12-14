@@ -73,6 +73,7 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
     });
 });
 
+//Funcion para crear un nuevo documento donde se mostrará la informacion de la herramienta seleccionada
 function crearDocumento(nombre){
 	var nombre = nombre;
 	console.log(nombre.toString());
