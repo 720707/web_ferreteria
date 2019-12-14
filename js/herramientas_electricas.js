@@ -68,15 +68,17 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         	"<p>Precio: &nbsp" + doc.data().Precio + "</p>"+ 
         	"</div>" +
         	"<div class='col-lg-4 col-md-6 col-sm-6'>" +
-        	"<img onClick='crearDocumento("+doc.data().Nombre.substr(0,6)+")' src=" + doc.data().Imagen + " width='150' height='125'>"
+        	"<img onClick='crearDocumento("+doc.data().id+")' src=" + doc.data().Imagen + " width='150' height='125'>"
         	+ "</div> </div>");
     });
 });
 
-function crearDocumento(nombre_producto){
+function crearDocumento(nombre){
+	var nombre = nombre;
+	console.log(nombre);
 	console.log("abriendo info producto");
 	var doc = document.open("text/html","replace");
-	var texto = "<html><body><h1>Saludo</h1>Este es el producto " + nombre_producto;
+	var texto = "<html><body><h1>Saludo</h1>Este es el producto ";
 	doc.write(texto);
 }
 
