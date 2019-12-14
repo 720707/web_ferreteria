@@ -77,10 +77,7 @@ function getCookie(cname) {
 var cookie = getCookie("1");
 console.log(cookie);
 
-var id_herramienta = $("#id_herr").val();
-var id = document.getElementById("id_herr").value;
-console.log("El id de la herramienta es: "+id_herramienta+id);
-db.collection("herramientas_electricas").where("id", "==", id_herramienta)
+db.collection("herramientas_electricas").where("id", "==", cookie)
     .get()
     .then(function(querySnapshot) {
     	console.log("Buscando herramienta" + id_herramienta)
