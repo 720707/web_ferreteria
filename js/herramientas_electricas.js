@@ -68,17 +68,26 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         	"<p>Precio: &nbsp" + doc.data().Precio + "</p>"+ 
         	"</div>" +
         	"<div class='col-lg-4 col-md-6 col-sm-6'>" +
-        	"<img onClick='crearDocumento(" +doc.data().id+ ")' src=" + doc.data().Imagen + " width='150' height='125'>"
+        	"<img onClick='crearDocumento(" +doc.data().id+ "), setCookie(id_herramienta,"+doc.data().id+ ",1)' src=" + doc.data().Imagen + " width='150' height='125'>"
         	+ "</div> </div>");
     });
 });
 
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+
 //Funcion para crear un nuevo documento donde se mostrará la informacion de la herramienta seleccionada
-function crearDocumento(nombre){
-	var nombre = nombre;
-	console.log(nombre.toString());
+function crearDocumento(id_herramienta){
+	var id_herramienta = id_herramienta;
+	console.log(id_herramienta.toString());
 	console.log("abriendo info producto");
-	var doc = document.open("text/html","replace");
+	var doc = document.open("text/html");
 	var cabecera = "<!DOCTYPE html> <html> <head> <title>La Broca</title>" +
 	"<meta name='viewport' content='width=device-width, initial-scale=1'>" +
     "<link rel='stylesheet' type='text/css' href='../bootstrap-4.3.1-dist/css/bootstrap.css'>"+
@@ -99,8 +108,8 @@ function crearDocumento(nombre){
     "</script></head> <body> "+
     "<div id='includedBar'></div>";
 
-    var contenido = "<div class ='container'> <p id='id_herr'>"+nombre+"</p> <div id='includedFooter'></div>"+
-     "<script type='text/javascript' src='../js/obtener_herramienta.js' async></script></body></html>";
+    var contenido = "<div class ='container'> <span id='id_herr'>"+id_herramienta+"</span> <div id='includedFooter'></div>"+
+     "<script type='text/javascript' id='identificador_js' src='../js/obtener_herramienta.js async></script></body></html>";
 
 	doc.write(cabecera);
 	doc.write(contenido);

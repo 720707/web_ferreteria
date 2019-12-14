@@ -58,10 +58,32 @@ function cerrar(){
 	})
 }
 
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+var cookie = getCookie("id_herramienta");
+console.log(cookie);
+
 var id_herramienta = $("#id_herr").val();
+var id = document.getElementById("id_herr").value;
+console.log("El id de la herramienta es: "+id_herramienta+id);
 db.collection("herramientas_electricas").where("id", "==", id_herramienta)
     .get()
     .then(function(querySnapshot) {
+    	console.log("Buscando herramienta" + id_herramienta)
         querySnapshot.forEach(function(doc) {
             // doc.data() is never undefined for query doc snapshots
             console.log(doc.id, " => ", doc.data().Nombre);
