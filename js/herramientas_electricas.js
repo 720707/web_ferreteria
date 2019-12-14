@@ -98,6 +98,6 @@ function crearDocumento(nombre){
     "</script></head> <body> "+
     "<div id='includedBar'></div></body></html>";
 
-	doc.write(texto);
+	doc.write(cabecera);
 }
 
