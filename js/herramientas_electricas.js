@@ -113,6 +113,5 @@ function crearDocumento(id_herramienta){
 
 	doc.write(cabecera);
 	doc.write(contenido);
-	doc.close();
 }
 
