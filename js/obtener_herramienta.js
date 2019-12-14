@@ -74,7 +74,7 @@ function getCookie(cname) {
     return "";
 }
 
-var cookie = getCookie("id_herramienta");
+var cookie = getCookie("1");
 console.log(cookie);
 
 var id_herramienta = $("#id_herr").val();
