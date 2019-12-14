@@ -85,9 +85,7 @@ function setCookie(cname, cvalue, exdays) {
 //Funcion para crear un nuevo documento donde se mostrará la informacion de la herramienta seleccionada
 function crearDocumento(id_herramienta){
 	var id_herramienta = id_herramienta;
-	console.log(id_herramienta.toString());
-	console.log("abriendo info producto");
-	var doc = document.open("text/html");
+	var doc = document.open("text/html","replace");
 	var cabecera = "<!DOCTYPE html> <html> <head> <title>La Broca</title>" +
 	"<meta name='viewport' content='width=device-width, initial-scale=1'>" +
     "<link rel='stylesheet' type='text/css' href='../bootstrap-4.3.1-dist/css/bootstrap.css'>"+
