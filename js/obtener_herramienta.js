@@ -80,7 +80,7 @@ console.log(cookie);
 db.collection("herramientas_electricas").where("id", "==", cookie)
     .get()
     .then(function(querySnapshot) {
-    	console.log("Buscando herramienta" + id_herramienta)
+    	console.log("Buscando herramienta" + cookie)
         querySnapshot.forEach(function(doc) {
             // doc.data() is never undefined for query doc snapshots
             console.log(doc.id, " => ", doc.data().Nombre);
