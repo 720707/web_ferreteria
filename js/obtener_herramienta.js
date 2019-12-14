@@ -69,5 +69,5 @@ db.collection("herramientas_electricas").where("id", "==", id_herramienta)
     })
     .catch(function(error) {
         console.log("Error getting documents: ", error);
-    }););
-});
+    });
+
