@@ -74,7 +74,7 @@ function getCookie(cname) {
     return "";
 }
 
-var cookie = getCookie("1");
+var cookie = getCookie("id_herramienta");
 console.log(cookie);
 
 db.collection("herramientas_electricas").where("id", "==", cookie)
