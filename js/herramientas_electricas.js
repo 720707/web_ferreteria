@@ -103,5 +103,6 @@ function crearDocumento(nombre){
 
 	doc.write(cabecera);
 	doc.write(contenido);
+	doc.close();
 }
 
