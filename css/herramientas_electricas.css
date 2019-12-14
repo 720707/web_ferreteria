@@ -4,9 +4,13 @@ html{
 }
 
 img{
-	border: black 3px ridge;
+	border: 1px solid #ccc;
 	display: block;
   	margin: auto;
+}
+
+img:hover {
+	border: 1px solid #777;
 }
 
 /*Alinear descripcion del producto al centro*/
