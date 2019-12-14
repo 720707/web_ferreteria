@@ -105,8 +105,8 @@ function crearDocumento(id_herramienta){
        "});"+
     "</script></head> <body> "+
     "<div id='includedBar'></div>"+
-    "<div class ='container'> <span>"+id_herramienta+"</span></div> <div id='includedFooter'></div>"+
-    "<script type='text/javascript' src='../js/obtener_herramienta.js></script>"+
+    "<div class ='container'></div> <div id='includedFooter'></div>"+
+    "<script type='text/javascript' src='../js/obtener_herramienta.js async></script>"+
     "</body></html>";
 
     var contenido = "";
