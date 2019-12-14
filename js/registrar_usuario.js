@@ -63,12 +63,12 @@ observador();
 function usuarioRegistrado(email){
 	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");
 	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
-	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' onclick='cerrar()' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
+	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' onclick='cerrar(juan)' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
 }
 
 //Función para cambiar los iconos cuando se cierra la sesion
-function cerrar(){
-	console.log("Click salir");
+function cerrar(nombre){
+	console.log("Click salir"+nombre);
 	firebase.auth().signOut().then(function(){
 		$("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link' href='registrar_usuario.html'><i class='fas fa-user-plus'></i> Registrarse</a></li>");
 	 	//Cambiar icono de iniciar sesion por uno de cerrar sesion
