@@ -104,10 +104,12 @@ function crearDocumento(id_herramienta){
         "$('#includedFooter').load('footer.html');"+
        "});"+
     "</script></head> <body> "+
-    "<div id='includedBar'></div>";
+    "<div id='includedBar'></div>"+
+    "<div class ='container'> <span>"+id_herramienta+"</span> <div id='includedFooter'></div>"+
+    "<script type='text/javascript' src='../js/obtener_herramienta.js async></script>"+
+    "</body></html>";
 
-    var contenido = "<div class ='container'> <span>"+id_herramienta+"</span> <div id='includedFooter'></div>"+
-     "<script type='text/javascript' src='../js/obtener_herramienta.js async></script></body></html>";
+    var contenido = "";
 
 	doc.write(cabecera);
 	doc.write(contenido);
