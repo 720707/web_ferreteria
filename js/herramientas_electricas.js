@@ -68,17 +68,36 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         	"<p>Precio: &nbsp" + doc.data().Precio + "</p>"+ 
         	"</div>" +
         	"<div class='col-lg-4 col-md-6 col-sm-6'>" +
-        	"<img onClick='crearDocumento(" +doc.id+ ")'; src=" + doc.data().Imagen + " width='150' height='125'>"
+        	"<img onClick='crearDocumento(" +doc.data().id+ ")' src=" + doc.data().Imagen + " width='150' height='125'>"
         	+ "</div> </div>");
     });
 });
 
 function crearDocumento(nombre){
 	var nombre = nombre;
-	console.log(nombre);
+	console.log(nombre.toString());
 	console.log("abriendo info producto");
 	var doc = document.open("text/html","replace");
-	var texto = "<html><body><h1>Saludo</h1>Este es el producto ";
+	var cabecera = "<!DOCTYPE html> <html> <head> <title>La Broca</title>" +
+	"<meta name='viewport' content='width=device-width, initial-scale=1'>" +
+    "<link rel='stylesheet' type='text/css' href='../bootstrap-4.3.1-dist/css/bootstrap.css'>"+
+    "<script src='../js/jquery-3.4.1.js'></script>"+
+    "<script src='../bootstrap-4.3.1-dist/js/bootstrap.min.js'></script>"+
+    "<link rel='stylesheet' type='text/css' href='../css/index.css'>"+
+    "<link href='https://fonts.googleapis.com/css?family=Lato:400,700&display=swap' rel='stylesheet'>"+
+    "<script src='https://kit.fontawesome.com/2ec255ffb9.js' crossorigin='anonymous'></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js'></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js'></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js'></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js'></script>"+
+	"<script>"+
+	   "$(function(){"+
+        "$('#includedBar').load('barra_navegacion.html');"+ 
+        "$('#includedFooter').load('footer.html');"+
+       "});"+
+    "</script></head> <body> "+
+    "<div id='includedBar'></div></body></html>";
+
 	doc.write(texto);
 }
 
