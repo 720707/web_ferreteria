@@ -74,6 +74,7 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
 });
 
 function crearDocumento(nombre_producto){
+	console.log("abriendo info producto");
 	var doc = document.open("text/html","replace");
 	var texto = "<html><body><h1>Saludo</h1>Este es el producto " + nombre_producto;
 	doc.write(texto);
