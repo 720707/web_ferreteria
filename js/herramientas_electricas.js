@@ -109,7 +109,7 @@ function crearDocumento(id_herramienta){
     "<div id='includedBar'></div>";
 
     var contenido = "<div class ='container'> <span id='id_herr'>"+id_herramienta+"</span> <div id='includedFooter'></div>"+
-     "<script type='text/javascript' id='identificador_js' src='../js/obtener_herramienta.js async></script></body></html>";
+     "<script type='text/javascript' src='../js/obtener_herramienta.js async></script></body></html>";
 
 	doc.write(cabecera);
 	doc.write(contenido);
