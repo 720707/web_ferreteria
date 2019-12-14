@@ -83,7 +83,7 @@ function crearDocumento(nombre){
     "<link rel='stylesheet' type='text/css' href='../bootstrap-4.3.1-dist/css/bootstrap.css'>"+
     "<script src='../js/jquery-3.4.1.js'></script>"+
     "<script src='../bootstrap-4.3.1-dist/js/bootstrap.min.js'></script>"+
-    "<link rel='stylesheet' type='text/css' href='../css/index.css'>"+
+    "<link rel='stylesheet' type='text/css' href='../css/herramientas_electricas.css'>"+
     "<link href='https://fonts.googleapis.com/css?family=Lato:400,700&display=swap' rel='stylesheet'>"+
     "<script src='https://kit.fontawesome.com/2ec255ffb9.js' crossorigin='anonymous'></script>"+
     "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js'></script>"+
