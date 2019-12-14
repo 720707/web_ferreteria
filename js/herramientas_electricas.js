@@ -81,15 +81,15 @@ function crearDocumento(nombre){
 	var cabecera = "<!DOCTYPE html> <html> <head> <title>La Broca</title>" +
 	"<meta name='viewport' content='width=device-width, initial-scale=1'>" +
     "<link rel='stylesheet' type='text/css' href='../bootstrap-4.3.1-dist/css/bootstrap.css'>"+
-    "<script src='../js/jquery-3.4.1.js'></script>"+
-    "<script src='../bootstrap-4.3.1-dist/js/bootstrap.min.js'></script>"+
+    "<script src='../js/jquery-3.4.1.js' async></script>"+
+    "<script src='../bootstrap-4.3.1-dist/js/bootstrap.min.js async' async></script>"+
     "<link rel='stylesheet' type='text/css' href='../css/herramientas_electricas.css'>"+
     "<link href='https://fonts.googleapis.com/css?family=Lato:400,700&display=swap' rel='stylesheet'>"+
     "<script src='https://kit.fontawesome.com/2ec255ffb9.js' crossorigin='anonymous'></script>"+
-    "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js'></script>"+
-    "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js'></script>"+
-    "<script src='https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js'></script>"+
-    "<script src='https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js'></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js' async></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js' async></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js' async></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js' async></script>"+
 	"<script>"+
 	   "$(function(){"+
         "$('#includedBar').load('barra_navegacion.html');"+ 
@@ -99,7 +99,7 @@ function crearDocumento(nombre){
     "<div id='includedBar'></div>";
 
     var contenido = "<div class ='container'> <p id='id_herr'>"+nombre+"</p> <div id='includedFooter'></div>"+
-     "<script type='text/javascript' src='../js/obtener_herramienta.js'></script></body></html>";
+     "<script type='text/javascript' src='../js/obtener_herramienta.js' async></script></body></html>";
 
 	doc.write(cabecera);
 	doc.write(contenido);
