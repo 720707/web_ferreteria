@@ -68,7 +68,7 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         	"<p>Precio: &nbsp" + doc.data().Precio + "</p>"+ 
         	"</div>" +
         	"<div class='col-lg-4 col-md-6 col-sm-6'>" +
-        	"<img src=" + doc.data().Imagen + " width='300' height='275'>"
+        	"<img src=" + doc.data().Imagen + " width='150' height='125'>"
         	+ "</div> </div>");
     });
 });
