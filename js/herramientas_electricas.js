@@ -85,7 +85,7 @@ function crearDocumento(nombre){
     "<script src='../bootstrap-4.3.1-dist/js/bootstrap.min.js' async></script>"+
     "<link rel='stylesheet' type='text/css' href='../css/herramientas_electricas.css'>"+
     "<link href='https://fonts.googleapis.com/css?family=Lato:400,700&display=swap' rel='stylesheet'>"+
-    "<script src='https://kit.fontawesome.com/2ec255ffb9.js' crossorigin='anonymous'></script>"+
+    "<script src='https://kit.fontawesome.com/2ec255ffb9.js' crossorigin='anonymous'async></script>"+
     "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js' async></script>"+
     "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js' async></script>"+
     "<script src='https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js' async></script>"+
