@@ -95,7 +95,7 @@ db.collection("herramientas_electricas").where("id", "==", cookie)
         	"<div class='col-lg-4 col-md-6 col-sm-6 order-md-1'>" +
         	"<img src=" + doc.data().Imagen + " width='300' height='275'>"
         	+ "</div> </div>");
-    });
+    	});
     })
     .catch(function(error) {
         console.log("Error getting documents: ", error);
