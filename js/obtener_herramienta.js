@@ -82,9 +82,20 @@ db.collection("herramientas_electricas").where("id", "==", cookie)
     .then(function(querySnapshot) {
     	console.log("Buscando herramienta" + cookie)
         querySnapshot.forEach(function(doc) {
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data().Nombre);
-        });
+            $(".producto").append("<hr class='featurette-divider'> " + 
+        	"<div class='row featurette'>" 
+        	+ "<div class='col-md-7 order-md-2 info_producto'>" +
+        	"<p><font size='3'>&nbsp <b>" + doc.data().Nombre + "</b> </p>"+
+        	"<p>Precio: &nbsp" + doc.data().Precio + "</p>"+ 
+        	"<p>Unidades Disponibles: &nbsp " + doc.data().Unidades +" </p>" + 
+        	"<p>Marca: &nbsp " + doc.data().Marca + "</p>" +
+        	"<p>Otras características: &nbsp Medidas : " + doc.data().Medidas + "</p>" +
+        	"<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: " + doc.data().Peso + "</p>" +
+        	"</div>" +
+        	"<div class='col-lg-4 col-md-6 col-sm-6 order-md-1'>" +
+        	"<img src=" + doc.data().Imagen + " width='300' height='275'>"
+        	+ "</div> </div>");
+    });
     })
     .catch(function(error) {
         console.log("Error getting documents: ", error);

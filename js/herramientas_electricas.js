@@ -104,13 +104,11 @@ function crearDocumento(){
        "});"+
     "</script> </head> <body> "+
     "<div id='includedBar'></div>"+
-    "<div class ='container'></div> <div id='includedFooter'></div>"+
+    "<div class ='container'></div> <div id='includedFooter'> <div id='producto'> </div></div>"+
     "<script type='text/javascript' src='../js/obtener_herramienta.js' async></script>"+
     "</body></html>";
 
-    var contenido = "";
-
 	doc.write(cabecera);
-	doc.write(contenido);
+	doc.close();
 }
 
