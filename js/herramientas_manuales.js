@@ -63,16 +63,50 @@ db.collection("herramientas_manuales").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         $(".herramientas_manuales").append("<hr class='featurette-divider'> " + 
         	"<div class='row featurette'>" 
-        	+ "<div class='col-md-7 order-md-2 info_producto'>" +
+        	+ "<div class='col-md-7 info_producto'>" +
         	"<p><font size='3'>&nbsp <b>" + doc.data().Nombre + "</b> </p>"+
         	"<p>Precio: &nbsp" + doc.data().Precio + "</p>"+ 
-        	"<p>Unidades Disponibles: &nbsp " + doc.data().Unidades +" </p>" + 
-        	"<p>Marca: &nbsp " + doc.data().Marca + "</p>" +
-        	"<p>Otras características: &nbsp Medidas : " + doc.data().Medidas + "</p>" +
-        	"<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: " + doc.data().Peso + "</p>" +
         	"</div>" +
-        	"<div class='col-lg-4 col-md-6 col-sm-6 order-md-1'>" +
-        	"<img src=" + doc.data().Imagen + " width='300' height='275'>"
+        	"<div class='col-lg-4 col-md-6 col-sm-6'>" +
+        	"<img onClick='crearDocumento(), setCookie(\"id_herramienta\",\"" +doc.data().Nombre+ "\",1)' src=" + doc.data().Imagen + " width='150' height='125'>"
         	+ "</div> </div>");
     });
 });
+
+//Función para crear una cookie
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+//Funcion para crear un nuevo documento donde se mostrará la informacion de la herramienta seleccionada
+function crearDocumento(){
+	var doc = document.open("text/html","replace");
+	var cabecera = "<!DOCTYPE html> <html> <head> <title>La Broca</title>" +
+	"<meta name='viewport' content='width=device-width, initial-scale=1'>" +
+    "<link rel='stylesheet' type='text/css' href='../bootstrap-4.3.1-dist/css/bootstrap.css'>"+
+    "<script src='../js/jquery-3.4.1.js' async></script>"+
+    "<script src='../bootstrap-4.3.1-dist/js/bootstrap.min.js' async></script>"+
+    "<link rel='stylesheet' type='text/css' href='../css/herramientas_electricas.css'>"+
+    "<link href='https://fonts.googleapis.com/css?family=Lato:400,700&display=swap' rel='stylesheet'>"+
+    "<script src='https://kit.fontawesome.com/2ec255ffb9.js' crossorigin='anonymous'async></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js' async></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js' async></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js' async></script>"+
+    "<script src='https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js' async></script>"+
+	"<script>"+
+	   "$(function(){"+
+        "$('#includedBar').load('barra_navegacion.html');"+ 
+        "$('#includedFooter').load('footer.html');"+
+       "});"+
+    "</script> </head> <body> "+
+    "<div id='includedBar'></div>"+
+    "<div class ='container'> <div id='producto'> </div> </div> <div id='includedFooter'>  </div>"+
+    "<script type='text/javascript' src='../js/obtener_herramienta.js' async></script>"+
+    "</body></html>";
+
+	doc.write(cabecera);
+	doc.close();
+}
