@@ -77,7 +77,7 @@ function getCookie(cname) {
 var cookie = getCookie("id_herramienta");
 console.log(cookie);
 
-db.collection("herramientas_electricas").where("id", "==", cookie)
+db.collection("herramientas_electricas").where("Nombre", "==", cookie)
     .get()
     .then(function(querySnapshot) {
     	console.log("Buscando herramienta" + cookie)
