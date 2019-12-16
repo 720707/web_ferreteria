@@ -68,7 +68,7 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         	"<p>Precio: &nbsp" + doc.data().Precio + "</p>"+ 
         	"</div>" +
         	"<div class='col-lg-4 col-md-6 col-sm-6'>" +
-        	"<img onClick='crearDocumento(" +doc.data().id+ "), setCookie(\"id_herramienta\","+doc.data().id+ ",1)' src=" + doc.data().Imagen + " width='150' height='125'>"
+        	"<img onClick='crearDocumento(), setCookie(\"id_herramienta\",\"" +doc.data().Nombre+ "\",1)' src=" + doc.data().Imagen + " width='150' height='125'>"
         	+ "</div> </div>");
     });
 });
@@ -83,8 +83,7 @@ function setCookie(cname, cvalue, exdays) {
 
 
 //Funcion para crear un nuevo documento donde se mostrará la informacion de la herramienta seleccionada
-function crearDocumento(id_herramienta){
-	var id_herramienta = id_herramienta;
+function crearDocumento(){
 	var doc = document.open("text/html","replace");
 	var cabecera = "<!DOCTYPE html> <html> <head> <title>La Broca</title>" +
 	"<meta name='viewport' content='width=device-width, initial-scale=1'>" +
