@@ -82,6 +82,7 @@ db.collection("herramientas_electricas").where("id", "==", cookie)
     .then(function(querySnapshot) {
     	console.log("Buscando herramienta" + cookie)
         querySnapshot.forEach(function(doc) {
+        	console.log("Mostrando herramienta");
             $(".producto").append("<hr class='featurette-divider'> " + 
         	"<div class='row featurette'>" 
         	+ "<div class='col-md-7 order-md-2 info_producto'>" +
