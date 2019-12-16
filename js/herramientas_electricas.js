@@ -110,5 +110,6 @@ function crearDocumento(){
     "</body></html>";
 
 	doc.write(cabecera);
+	doc.close();
 }
 
