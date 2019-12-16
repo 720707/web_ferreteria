@@ -73,6 +73,7 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
     });
 });
 
+//Función para crear una cookie
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
