@@ -58,18 +58,7 @@ function cerrar(){
 	})
 }
 
-function obtener_coleccion(){
-	var coleccion;
-	if($("#nombre_coleccion").val() == "Herramientas Eléctricas"){
-		coleccion = "herramientas_electricas";
-	}else if($("#nombre_coleccion").val() == "Herramientas Manuales"){
-		coleccion = "herramientas_manuales";
-	}else{
-		coleccion = "Iluminacion_bombillas"
-	}
 
-	return coleccion;
-}
 
 //Obtener las herramientas electricas de la DB y crear un featurette para cada herramienta
 db.collection("herramientas_electricas").get().then((querySnapshot) => {
@@ -82,7 +71,7 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         	"</div>" +
         	"<div class='col-lg-4 col-md-6 col-sm-6'>" +
         	"<img onClick='crearDocumento(), setCookie(\"nom_herramienta\",\"" +doc.data().Nombre+ "\",1), "
-        	+"setCookie(\"nom_coleccion\",\"" +obtener_coleccion()+ "\",1)' src=" + doc.data().Imagen + " width='150' height='125'>"
+        	+"setCookie(\"nom_coleccion\",\"" +herramientas_electricas+ "\",1)' src=" + doc.data().Imagen + " width='150' height='125'>"
         	+ "</div> </div>");
     });
 });

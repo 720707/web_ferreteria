@@ -58,17 +58,19 @@ function cerrar(){
 	})
 }
 
-//Obtener las herramientas de la DB y crear un featurette para cada herramienta
+
+//Obtener las herramientas electricas de la DB y crear un featurette para cada herramienta
 db.collection("herramientas_manuales").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-        $(".herramientas_manuales").append("<hr class='featurette-divider'> " + 
+        $(".herramientas_electricas").append("<hr class='featurette-divider'> " + 
         	"<div class='row featurette'>" 
         	+ "<div class='col-md-7 info_producto'>" +
         	"<p><font size='3'>&nbsp <b>" + doc.data().Nombre + "</b> </p>"+
         	"<p>Precio: &nbsp" + doc.data().Precio + "</p>"+ 
         	"</div>" +
         	"<div class='col-lg-4 col-md-6 col-sm-6'>" +
-        	"<img onClick='crearDocumento(), setCookie(\"nom_herramienta\",\"" +doc.data().Nombre+ "\",1)' src=" + doc.data().Imagen + " width='150' height='125'>"
+        	"<img onClick='crearDocumento(), setCookie(\"nom_herramienta\",\"" +doc.data().Nombre+ "\",1), "
+        	+"setCookie(\"nom_coleccion\",\"" +herramientas_manuales+ "\",1)' src=" + doc.data().Imagen + " width='150' height='125'>"
         	+ "</div> </div>");
     });
 });
@@ -80,6 +82,7 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
+
 
 //Funcion para crear un nuevo documento donde se mostrará la informacion de la herramienta seleccionada
 function crearDocumento(){
@@ -109,4 +112,5 @@ function crearDocumento(){
 
 	doc.write(cabecera);
 	doc.close();
+
 }
