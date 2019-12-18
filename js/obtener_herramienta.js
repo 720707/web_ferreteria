@@ -74,13 +74,15 @@ function getCookie(cname) {
     return "";
 }
 
-var id_herramienta = getCookie("id_herramienta");
-console.log(id_herramienta);
+var nom_herramienta = getCookie("nom_herramienta");
+console.log(nom_herramienta);
 
-db.collection("herramientas_electricas").where("Nombre", "==", id_herramienta)
+//Funcion para obtener la información de un herramienta especifica mediante el nombre
+//de esta
+db.collection("herramientas_electricas").where("Nombre", "==", nom_herramienta)
     .get()
     .then(function(querySnapshot) {
-    	console.log("Buscando herramienta" + id_herramienta)
+    	console.log("Buscando herramienta" + nom_herramienta)
         querySnapshot.forEach(function(doc) {
         	console.log("Mostrando herramienta");
             $("#producto").append("<hr class='featurette-divider'> " + 
