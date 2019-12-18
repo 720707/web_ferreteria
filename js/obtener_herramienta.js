@@ -92,6 +92,7 @@ db.collection("herramientas_electricas").where("Nombre", "==", id_herramienta)
         	"<p>Marca: &nbsp " + doc.data().Marca + "</p>" +
         	"<p>Otras características: &nbsp Medidas : " + doc.data().Medidas + "</p>" +
         	"<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Peso: " + doc.data().Peso + "</p>" +
+        	"<button class='btn btn-primary' type='button'><i class='fas fa-shopping-cart'></i>Comprar</button> "+
         	"</div>" +
         	"<div class='col-lg-4 col-md-6 col-sm-6 order-md-1'>" +
         	"<img src=" + doc.data().Imagen + " width='300' height='275'>"
