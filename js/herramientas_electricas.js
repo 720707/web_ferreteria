@@ -96,7 +96,6 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 
-
 //Funcion para crear un nuevo documento donde se mostrará la informacion de la herramienta seleccionada
 function crearDocumento(){
 	var doc = document.open("text/html","replace");
