@@ -75,11 +75,12 @@ function getCookie(cname) {
 }
 
 var nom_producto = getCookie("nom_producto");
+var coleccion = getCookie("nom_coleccion");
 console.log(nom_producto);
 
 //Funcion para obtener la información de un herramienta especifica mediante el nombre
 //de esta
-db.collection("herramientas_electricas").where("Nombre", "==", nom_producto)
+db.collection(coleccion).where("Nombre", "==", nom_producto)
     .get()
     .then(function(querySnapshot) {
     	console.log("Buscando herramienta" + nom_producto)
