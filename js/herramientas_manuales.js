@@ -101,7 +101,7 @@ function crearDocumento(){
         "$('#includedBar').load('barra_navegacion.html');"+ 
         "$('#includedFooter').load('footer.html');"+
        "});"+
-    "async </script> </head> <body> "+
+    "</script> </head> <body> "+
     "<div id='includedBar'></div>"+
     "<div class ='container'> <div id='producto'> </div> </div> <div id='includedFooter'>  </div>"+
     "<script type='text/javascript' src='../js/obtener_herramienta.js' async></script>"+
