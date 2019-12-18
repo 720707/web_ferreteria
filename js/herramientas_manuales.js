@@ -62,7 +62,7 @@ function cerrar(){
 //Obtener las herramientas electricas de la DB y crear un featurette para cada herramienta
 db.collection("herramientas_manuales").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-        $(".herramientas_electricas").append("<hr class='featurette-divider'> " + 
+        $(".herramientas_manuales").append("<hr class='featurette-divider'> " + 
         	"<div class='row featurette'>" 
         	+ "<div class='col-md-7 info_producto'>" +
         	"<p><font size='3'>&nbsp <b>" + doc.data().Nombre + "</b> </p>"+
