@@ -38,5 +38,9 @@ body{
  	margin-bottom: 20%;
 }
 
+#boton_comprar{
+	position:absolute;
+	right: 30px;
 
+}
 
