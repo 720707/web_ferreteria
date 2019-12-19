@@ -76,16 +76,13 @@ function getCookie(cname) {
 
 var nom_producto = getCookie("nom_producto");
 var coleccion = getCookie("nom_coleccion");
-console.log(nom_producto);
 
 //Funcion para obtener la información de un herramienta especifica mediante el nombre
 //de esta
 db.collection(coleccion).where("Nombre", "==", nom_producto)
     .get()
     .then(function(querySnapshot) {
-    	console.log("Buscando herramienta" + nom_producto)
         querySnapshot.forEach(function(doc) {
-        	console.log("Mostrando herramienta");
         	if(coleccion == "herramientas_electricas" || coleccion == "herramientas_manuales"){
         		$("#producto").append("<hr class='featurette-divider'> " + 
 	        	"<div class='row featurette'>" 
@@ -110,14 +107,13 @@ db.collection(coleccion).where("Nombre", "==", nom_producto)
 	        	"<p>Unidades Disponibles: &nbsp " + doc.data().Unidades +" </p>" + 
 	        	"<p>Marca: &nbsp " + doc.data().Marca + "</p>" +
 	        	"<p>Otras características: &nbsp Potencia : " + doc.data().Potencia + "</p>" +
-	        	"<button class='btn btn-primary' type='button'><i class='fas fa-shopping-cart'></i>Comprar</button> "+
 	        	"</div>" +
 	        	"<div class='col-lg-4 col-md-6 col-sm-6 order-md-1'>" +
 	        	"<img src=" + doc.data().Imagen + " width='300' height='275'>"
-	        	+ "</div> </div>");
+	        	+ "</div> </div>" +
+	        	 "<br><button id='boton_comprar' class='btn btn-primary' type='button'><i class='fas fa-shopping-cart'></i>&nbspComprar</button> ");
         	}
             
-        	console.log("Mostrando herramienta");
     	});
     })
     .catch(function(error) {
