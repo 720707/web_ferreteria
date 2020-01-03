@@ -1,3 +1,9 @@
+/*
+  Página que comprueba si el usuario esta en la base de datos
+  Autor: Javier Ramos Marco
+  Fecha: 3-01-2020
+*/
+
 // Firebase con Authentication para usuarios
 var firebaseConfig = {
     apiKey: "AIzaSyBr3K0g46i_ZQVj_YsIisccyL2S_9TZc_0",
@@ -14,7 +20,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var infoInicioSesion = document.querySelector("#infoInicioSesion");
 
-//Se captura el usuario y contraseña del formulario y se registra
+//Se captura el usuario y contraseña del formulario y se registra en la base de datos
 $("#iniciar_sesion").click(function(event){
 	event.preventDefault();
 
@@ -56,17 +62,19 @@ function observador(){
 
 observador();
 
+//Función que comprueba si la sesión del usuario esta ya iniciada y cambia los botones
 function usuarioRegistrado(email){
+	//Cambiar boton de registrar usuario por el nombre del usuario
 	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");
-	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
+	 //Cambiar bton de iniciar sesion por uno de cerrar sesion
 	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' onclick='cerrar()' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
 }
 
 function cerrar(){
-	console.log("Click salir");
 	firebase.auth().signOut().then(function(){
+		//Cambiar boton con el nombre del usuario por uno de registrar usuario
 		$("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link' href='registrar_usuario.html'><i class='fas fa-user-plus'></i> Registrarse</a></li>");
-	 	//Cambiar icono de iniciar sesion por uno de cerrar sesion
+	 	//Cambiar boton de cerrar sesion por uno de iniciar sesion
 	 	$("#IniciarSesionBarNav").html("<li class='nav-item'><a class='nav-link' href='iniciar_sesion.html'><i class='fas fa-user'></i> Iniciar Sesion</a></li>");
 	}).catch(function(error){
 		console.log(error);

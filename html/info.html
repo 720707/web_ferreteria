@@ -1,3 +1,7 @@
+<!--
+  Autor: Javier Ramos Marco
+  Fecha: 3-01-2020
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,9 +25,10 @@
 <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
 
+<!--Incluir barra de navegación y pie de pagina-->
 <script>
 	$(function(){
-      $("#includedContent").load("barra_navegacion.html"); 
+      $("#includedBar").load("barra_navegacion.html"); 
       $("#includedFooter").load("footer.html");
     });
 </script>
@@ -31,7 +36,8 @@
 </head>
 
 <body>
-	<div id="includedContent"></div>
+  <!--Barra de navegación -->  
+	<div id="includedBar"></div>
 	<div class ="container">
 		<div class="jumbotron">
 			<h1><i class="fas fa-info"></i> Sobre Nosotros </h1>
@@ -55,6 +61,7 @@
 	<hr class="featurette-divider">
 
     <div class="row featurette">
+      <!--Con order-md-2, este elemento aparece en segundo lugar-->
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">Donde estamos. <span class="text-muted">Ven a visitarnos</span></h2>
         <p class="lead">Nos encontramos en Carrer d'Agramunt, 14, 08023 Barcelona.</p>
@@ -91,6 +98,7 @@
     </div>
 
 	<!-- /END THE FEATURETTES -->
+  <!--Pie de página -->  
 	<div id="includedFooter"></div>
 <script type="text/javascript" src="../js/comprobar_sesion.js"></script>
 

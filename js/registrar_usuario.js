@@ -1,3 +1,9 @@
+/*
+  Página registra un usuario en la base de datos
+  Autor: Javier Ramos Marco
+  Fecha: 3-01-2020
+*/
+
 // Firebase con Authentication para usuarios
 var firebaseConfig = {
     apiKey: "AIzaSyBr3K0g46i_ZQVj_YsIisccyL2S_9TZc_0",
@@ -70,8 +76,9 @@ function usuarioRegistrado(email){
 function cerrar(nombre){
 	console.log("Click salir"+nombre);
 	firebase.auth().signOut().then(function(){
+		//Cambiar boton con el nombre del usuario por uno de registrar usuario
 		$("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link' href='registrar_usuario.html'><i class='fas fa-user-plus'></i> Registrarse</a></li>");
-	 	//Cambiar icono de iniciar sesion por uno de cerrar sesion
+	 	//Cambiar boton de cerrar sesion por uno de iniciar sesion
 	 	$("#IniciarSesionBarNav").html("<li class='nav-item'><a class='nav-link' href='iniciar_sesion.html'><i class='fas fa-user'></i> Iniciar Sesion</a></li>");
 	}).catch(function(error){
 		console.log(error);

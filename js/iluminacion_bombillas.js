@@ -1,6 +1,10 @@
+/*
+  Página que muestra una imágen, nombre y precio para cada herramienta manual.
+  Autor: Javier Ramos Marco
+  Fecha: 3-01-2020
+*/
 
 // Your web app's Firebase configuration
-
 var firebaseConfig = {
 	apiKey: "AIzaSyBr3K0g46i_ZQVj_YsIisccyL2S_9TZc_0",
 	authDomain: "ferreteria-81897.firebaseapp.com",
@@ -16,7 +20,7 @@ if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
 
-
+//Obtener la base de datos
 var db = firebase.firestore();
 
 function observador(){
@@ -42,17 +46,19 @@ function observador(){
 
 observador();
 
+//Función que comprueba si la sesión del usuario esta ya iniciada y cambia los botones
 function usuarioRegistrado(email){
-	 $("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");
-	 //Cambiar icono de iniciar sesion por uno de cerrar sesion
-	 $("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' onclick='cerrar()' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
+	//Cambiar boton de registrar usuario por el nombre del usuario
+	$("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link disabled' href='#'>" + email + "</a></li>");
+	//Cambiar bton de iniciar sesion por uno de cerrar sesion
+	$("#IniciarSesionBarNav").html("<button id='cerrarSesionBoton' onclick='cerrar()' class='btn btn-secondary my-2 my-sm-0' type='submit'>Cerrar Sesion</button>");
 }
 
 function cerrar(){
-	console.log("Click salir");
 	firebase.auth().signOut().then(function(){
+		//Cambiar boton con el nombre del usuario por uno de registrar usuario
 		$("#RegistrarBarNav").html("<li class='nav-item'><a class='nav-link' href='registrar_usuario.html'><i class='fas fa-user-plus'></i> Registrarse</a></li>");
-	 	//Cambiar icono de iniciar sesion por uno de cerrar sesion
+	 	//Cambiar boton de cerrar sesion por uno de iniciar sesion
 	 	$("#IniciarSesionBarNav").html("<li class='nav-item'><a class='nav-link' href='iniciar_sesion.html'><i class='fas fa-user'></i> Iniciar Sesion</a></li>");
 	}).catch(function(error){
 		console.log(error);
@@ -60,6 +66,8 @@ function cerrar(){
 }
 
 //Obtener las herramientas de la DB y crear un featurette para cada herramienta
+//Se pone a la imagen a la escucha del evento onClick() y se llama a la función crearDocumento() y 
+//setCookie() para pasar parametros entre páginas
 db.collection("Iluminacion_bombillas").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
         $(".iluminacion_bombillas").append("<hr class='featurette-divider'> " + 

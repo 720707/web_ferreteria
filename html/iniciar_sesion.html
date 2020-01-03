@@ -1,3 +1,8 @@
+<!--
+  Página para iniciar sesión desde un usuario existente
+  Autor: Javier Ramos Marco
+  Fecha: 3-01-2020
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +33,7 @@
 <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
 
-
+<!--Incluir barra de navegación y pie de pagina-->
 <script>
 	$(function(){
       $("#includedBar").load("barra_navegacion.html"); 
@@ -39,8 +44,11 @@
 </head>
 
 <body>
+	<!--Barra de navegación -->  
 	<div id="includedBar"></div>
 	<div class ="container text-center">
+		<!--Formulario para iniciar sesion:
+			param: correo electronico y contraseña-->
 		<form class="form-signin">
 		  	<h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
 		  	<label for="inputEmail" class="sr-only">Correo electrónico</label>
@@ -50,9 +58,11 @@
 		  	<button id="iniciar_sesion" class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
 
 		</form>
+		<!--span para mostrar informacion sobre el inicio de sesión-->
 		<span id="infoInicioSesion"> </span>
 	</div>
 
+	<!--Pie de pagina -->  
 	<div id="includedFooter"></div>
 <script type="text/javascript" src="../js/iniciar_sesion.js"></script>
 </body>
