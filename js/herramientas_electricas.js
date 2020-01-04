@@ -102,7 +102,7 @@ function crearDocumento(){
     "<link rel='stylesheet' type='text/css' href='../bootstrap-4.3.1-dist/css/bootstrap.css'>"+
     "<script src='../js/jquery-3.4.1.js' async></script>"+
     "<script src='../bootstrap-4.3.1-dist/js/bootstrap.min.js' async></script>"+
-    "<link rel='stylesheet' type='text/css' href='../css/pdoructos.css'>"+
+    "<link rel='stylesheet' type='text/css' href='../css/productos.css'>"+
     "<link href='https://fonts.googleapis.com/css?family=Lato:400,700&display=swap' rel='stylesheet'>"+
     "<script src='https://kit.fontawesome.com/2ec255ffb9.js' crossorigin='anonymous'async></script>"+
     "<script src='https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js' async></script>"+
