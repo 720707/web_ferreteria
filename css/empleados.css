@@ -4,12 +4,13 @@
 	margin-right: 0.5em
 }
 
+/* */
 .empleado{
 	width: 140px;
 	height: 140px;
 }
 
-
+/*Me parece que el placeholder no hace falta*/
 .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -39,6 +40,7 @@ html{
 	height: 100%;
 }
 
+/*Estilo para el dropdown*/
 .dropdown {
   position: relative;
   display: inline-block;
