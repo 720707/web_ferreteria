@@ -78,7 +78,7 @@ db.collection("herramientas_electricas").get().then((querySnapshot) => {
         	"<p>Precio: &nbsp" + doc.data().Precio + "</p>"+ 
         	"</div>" +
         	"<div class='col-lg-4 col-md-6 col-sm-6'>" +
-        	+ "<img src= " + doc.data().Imagen + " width='150' height='125'> "
+        	+ "<img src=" + doc.data().Imagen + " width='150' height='125'> "
         	/**"<img onClick='crearDocumento(), setCookie(\"nom_producto\",\"" +doc.data().Nombre+ "\",1), "
         	+"setCookie(\"nom_coleccion\",\"herramientas_electricas\",1)' src=" + doc.data().Imagen + " width='150' height='125'>"**/
         	+ "</div> </div>");
