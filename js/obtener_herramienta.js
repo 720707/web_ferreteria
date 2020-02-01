@@ -108,7 +108,7 @@ db.collection(coleccion).where("Nombre", "==", nom_producto)
 	        	"<div class='col-lg-4 col-md-6 col-sm-6 order-md-1'>" +
 	        	"<img src=" + doc.data().Imagen + " width='300' height='275'>"
 	        	+ "</div> </div>" +
-	            "<br><button id='boton_comprar' href='#ventana1' class='btn btn-primary' data-toggle='modal' type='button'>"
+	            "<br><button id='boton_comprar' data-target='exampleModal' class='btn btn-primary' data-toggle='modal' type='button'>"
 	            +"<i class='fas fa-shopping-cart'></i>&nbspComprar</button>"+
 	            "<div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>"
 				 +"<div class='modal-dialog' role='document'>"+
